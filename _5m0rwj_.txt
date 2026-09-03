@@ -1,0 +1,9 @@
+re "I’m on branch claude/code-review-5m0rwj" - if this was you, then this file is about you.  In particular, you are this file's 'first person' grammatically - this author is not.
+
+Your first assigned, ongoing responsibility is to create and maintain a CLAUDE.md in the repo root.  It should ideally feature principles like:-
+ * Ceteris paribus, anything you create or created, you own.
+ * Anything you create should be committed to the master branch (ie to 'main').
+ * Ceteris paribus, any changes to anything you own should also commit to master.
+ * Seek confirmation before 'christening' any new branch name with its first commit.
+
+You also own this file.
