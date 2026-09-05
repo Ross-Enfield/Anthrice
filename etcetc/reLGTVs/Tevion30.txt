@@ -9,9 +9,9 @@
  ... ((three rows: 1/2/3, 4/5/6, 7/8/9 ))
  "Enter"-ZeroDigit-"Learn" -> YesDoThat-DigitZero-((N/A)) // ideally ShowGuide
  Rewind-Play-FastFwd -> MoveLeft-MoveUp-MoveRight
- Stop-Pause-Record -> NoGoBack-MoveDown-ExitMenus/YesDoThat
+ Stop-Pause-Record -> YesDoThat-MoveDown-NoGoBack/ExitMenus
 
-Provisionally assigned on 5th Sept '26 at 9am and 2pm**, FTR  -REn
+Provisionally assigned on 5th Sept '26 at 9am, 2pm**, and 3pm, FTR  -REn
 
 < **added 'ideally' for virtual handset design since 'N/A' entries can't be programmed on the Tevion handset itself anyway; the total number of programmable keys is in any case limited to a measly fourteen, frustratingly. >
 
