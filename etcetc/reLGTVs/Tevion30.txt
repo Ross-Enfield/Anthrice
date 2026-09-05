@@ -3,12 +3,15 @@
 ====The ten rows of three buttons each====
 
  Mute-"A/V"-Power -> BeSilent-SwitchInput-ToggleOnOff
- TV-DVD-Sat -> HDMI1/2/3 <<NB: if so, a certain logic would assign HDMI4 to "A/V" above>> 
+ TV-DVD-Sat -> ((3x N/A)) // ideally HDMI1/2/3 <<NB: if so, a certain logic would assign HDMI4 to "A/V" above>> 
  "+Ch"-"Menu"-"+Vol" -> IncChannel-HomeScreen-BeLouder
- "-Ch"-"Set"-"-Vol" -> DecChannel-ExitMenus-BeQuieter
+ "-Ch"-"Set"-"-Vol" -> DecChannel-((N/A))-BeQuieter // ideally ToggleSubtitles
  ... ((three rows: 1/2/3, 4/5/6, 7/8/9 ))
- Enter-ZeroDigit-Learn -> YesDoThat-DigitZero-NoGoBack/ExitMenus
+ "Enter"-ZeroDigit-"Learn" -> YesDoThat-DigitZero-((N/A)) // ideally ShowGuide
  Rewind-Play-FastFwd -> MoveLeft-MoveUp-MoveRight
- Stop-Pause-Record -> NoGoBack-MoveDown-YesDoThat/ExitMenus
+ Stop-Pause-Record -> NoGoBack-MoveDown-ExitMenus/YesDoThat
 
-Provisionally assigned on 5th Sept '26 at 9am, FTR  -REn
+Provisionally assigned on 5th Sept '26 at 9am and 2pm**, FTR  -REn
+
+< **added 'ideally' for virtual handset design since 'N/A' entries can't be programmed on the Tevion handset itself anyway; the total number of programmable keys is in any case limited to a measly fourteen, frustratingly. >
+
