@@ -1,0 +1,14 @@
+==Aldi Tevion IR handset==
+
+====The ten rows of three buttons each====
+
+ Mute-"A/V"-Power -> BeSilent-SwitchInput-ToggleOnOff
+ TV-DVD-Sat -> HDMI1/2/3 <<NB: if so, a certain logic would assign HDMI4 to "A/V" above>> 
+ "+Ch"-"Menu"-"+Vol" -> IncChannel-HomeScreen-BeLouder
+ "-Ch"-"Set"-"-Vol" -> DecChannel-ExitMenus-BeQuieter
+ ... ((three rows: 1/2/3, 4/5/6, 7/8/9 ))
+ Enter-ZeroDigit-Learn -> YesDoThat-DigitZero-NoGoBack/ExitMenus
+ Rewind-Play-FastFwd -> MoveLeft-MoveUp-MoveRight
+ Stop-Pause-Record -> NoGoBack-MoveDown-YesDoThat/ExitMenus
+
+Provisionally assigned on 5th Sept '26 at 9am, FTR  -REn
