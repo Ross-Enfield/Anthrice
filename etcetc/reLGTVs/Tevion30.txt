@@ -2,16 +2,47 @@
 
 ====The ten rows of three buttons each====
 
- Mute-"A/V"-Power -> BeSilent-SwitchInput-ToggleOnOff
- TV-DVD-Sat -> ((3x N/A)) // ideally HDMI1/2/3 <<NB: if so, a certain logic would assign HDMI4 to "A/V" above>> 
- "+Ch"-"Menu"-"+Vol" -> IncChannel-HomeScreen-BeLouder
- "-Ch"-"Set"-"-Vol" -> DecChannel-((N/A))-BeQuieter // ideally ToggleSubtitles
- ... ((three rows: 1/2/3, 4/5/6, 7/8/9 ))
- "Enter"-ZeroDigit-"Learn" -> YesDoThat-DigitZero-((N/A)) // ideally ShowGuide
- Rewind-Play-FastFwd -> MoveLeft-MoveUp-MoveRight
- Stop-Pause-Record -> YesDoThat-MoveDown-NoGoBack/ExitMenus
+ 1. Mute 90[T] · Input D0[O] · Power 10[T]
+    Mute-"A/V"-Power
+ -> BeSilent-CycleInputs-ToggleOnOff
+
+ 2. Exit DA[E] · HDMI4 5B[D] · Antenna 6B[D?]
+    TV-DVD-Sat // F0 is a possible alt for 6B
+ -> ((3x N/A)) // NB: 'N/A' means they aren't programmable on a Tevion 55484
+
+3. Ch+ 00[S] · Home 3E[T?] · Vol+ 40[S]
+   "+Ch"-"Menu"-"+Vol"
+-> IncChannel-HomeScreen-BeLouder
+
+ 4. Ch− 80[S] · Subtitle 9C[T] · Vol− C0[S]
+    "-Ch"  -  "Set"  -  "-Vol"
+ -> DecChannel-((N/A, ideally ToggleSubtitles))-BeQuieter
+
+ 5. 1 88[E] · 2 48[E] · 3 C8[E]
+
+ 6. 4 28[E] · 5 A8[E] · 6 68[E]
+
+ 7. 7 E8[E] · 8 18[E] · 9 98[E]
+
+ 8. Guide i D5[O?] · 0 08[E] · Guide ii 95[O?]
+    "Enter"-ZeroDigit-"Learn" // Sources conflict re D5 vs 95 for Guide so include both at v1
+ -> YesDoThat-DigitZero-((N/A, ideally ShowGuide))
+
+ 9. Left E0[S] · Up 02[S] · Right 60[S]
+    Rewind-Play-FastFwd
+ -> MoveLeft-MoveUp-MoveRight
+
+10. OK 22[E] · Down 82[S] · Back 14[E]
+    Stop-Pause-Record
+ -> YesDoThat-MoveDown-NoGoBack/ExitMenus
+
+Suffixes: [T] toggle, [S] step, [D] discrete set, [E] enter/submit, [O] opens a picker or menu, [?] behaviour unconfirmed.
+
+NB: Two-digit values are the MSB command octet following the 0x20DF... for (set no. 4) NEC strings so bit-reverse each when matching LG's own table notation.
 
 Provisionally assigned on 5th Sept '26 at 9am, 2pm**, and 3pm, FTR  -REn
 
-< **added 'ideally' for virtual handset design since 'N/A' entries can't be programmed on the Tevion handset itself anyway; the total number of programmable keys is in any case limited to a measly fourteen, frustratingly. >
+<< **added 'ideally' for virtual handset design since 'N/A' entries can't be programmed on the Tevion handset itself anyway; the total number of programmable keys is in any case limited to a measly fourteen, frustratingly. >>
+
+Concretely assigned on 14th Sept '26 at 11am  -REn
 
