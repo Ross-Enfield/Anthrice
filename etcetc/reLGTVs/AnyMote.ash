@@ -13,7 +13,7 @@
           return 16 - index("FEDCBA9876543210", toupper(d))
         }
         function nib(n,  b, s) {
-          for (b = 8; b; b /= 2)
+          for (b = 8; b >= 1; b /= 2)
             s = s M "," (int(n / b) % 2 ? W : M) ","
           return s
         }
@@ -35,13 +35,14 @@
 
 AWK_EOF
 
+  mkdir -p ${TMPDIR:-/tmp}/amsr4nec/
   cat >./amsr4nec.cgi <<'CGI_EOF'
 #!/bin/sh
 ##############################################################################
 
         printf 'Content-Type: application/octet-stream\r\n'
         printf 'Content-Disposition: attachment; filename="lg-tv-ir.amsr"\r\n'
-        TEMPDIR=${TMPDIR:-/tmp}/cgi$$
+        TEMPDIR=${TMPDIR:-/tmp}/amsr4nec/cgi$$
         mkdir "$TEMPDIR"
         trap 'rm -rf "$TEMPDIR"' EXIT HUP INT TERM
         printf '%s\n' "$PATH_INFO" |
