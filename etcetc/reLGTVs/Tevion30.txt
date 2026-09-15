@@ -2,7 +2,7 @@
 
 QUERY_STRING=Mute=90&Input=D0&Power=10&ExiTV=DA&DVDin=5B&AntIn=6B&Next=00&Menus=3E&Loud=40&Prev=80&Subts=9C&Soft=C0&ONE=88&TWO=48&THREE=C8&FOUR=28&FIVE=A8&SIX=68&SEVEN=E8&EIGHT=18&NINE=98&Guide=D5&ZERO=08&Learn=95&Left=E0&Up=02&Right=60&OK=22&Down=82&BACK=14&
 
-< http://localhost/cgi-bin/amsr4nec.cgi/=/([(1st)))/(((2nd)))/(((3rd)])/((ante))/((glue))/((post))/([(Nth)])/&?Mute=90&Input=D0&Power=10&ExiTV=DA&DVDin=5B&AntIn=6B&Next=00&Menus=3E&Loud=40&Prev=80&Subts=9C&Soft=C0&ONE=88&TWO=48&THREE=C8&FOUR=28&FIVE=A8&SIX=68&SEVEN=E8&EIGHT=18&NINE=98&Guide=D5&ZERO=08&Learn=95&Left=E0&Up=02&Right=60&OK=22&Down=82&BACK=14& >
+< http://localhost/cgi-bin/amsr4nec.cgi/('name':'LG TV',/'all_codes':[/('function':'/','code1':'/'}/]}?Mute=90&Input=D0&Power=10&ExiTV=DA&DVDin=5B&AntIn=6B&Next=00&Menus=3E&Loud=40&Prev=80&Subts=9C&Soft=C0&ONE=88&TWO=48&THREE=C8&FOUR=28&FIVE=A8&SIX=68&SEVEN=E8&EIGHT=18&NINE=98&Guide=D5&ZERO=08&Learn=95&Left=E0&Up=02&Right=60&OK=22&Down=82&BACK=14& >
 
 ====The ten rows of three buttons each====
 
