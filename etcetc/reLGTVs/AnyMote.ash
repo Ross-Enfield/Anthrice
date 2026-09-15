@@ -48,6 +48,7 @@ AWK_EOF
 
         printf '//%s//\n' "$PATH_INFO" |
           tr '/' '\n' |
+          egrep -v '^$' |
           tr "()'" '{}"' >"$TEMPDIR/format.txt"
         head -n -4 "$TEMPDIR/format.txt" >"$TEMPDIR/output.txt"
         tail -n 4 "$TEMPDIR/format.txt" |
