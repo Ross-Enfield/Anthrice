@@ -2,7 +2,9 @@
 ######### Not really intended to be chmod +x'd but be my guest ###############
 ##############################################################################
 
-  printf 'Content-Type: text/plain\r\n\r\n' # be nice
+  printf 'Content-Type: text/plain\r\n' \
+         'Cache-Control: no-cache\r\n' \
+         '\r\n' # be nice
   set -e
 
 # Assume we're in a CGI bin with a writable parent
@@ -40,12 +42,11 @@ AWK_EOF
 #!/bin/sh
 ##############################################################################
 
-        printf 'Content-Type: application/octet-stream\r\n'
-        printf 'Content-Disposition: attachment; filename="lg-tv-ir.amsr"\r\n'
         TEMPDIR=${TMPDIR:-/tmp}/amsr4nec/cgi$$
         mkdir "$TEMPDIR"
         trap 'rm -rf "$TEMPDIR"' EXIT HUP INT TERM
-        printf '%s\n' "$PATH_INFO" |
+
+        printf '//%s//\n' "$PATH_INFO" |
           tr '/' '\n' |
           tr "()'" '{}"' >"$TEMPDIR/format.txt"
         head -n -4 "$TEMPDIR/format.txt" >"$TEMPDIR/output.txt"
@@ -58,21 +59,20 @@ AWK_EOF
         tail -n 1 "$TEMPDIR/format.txt" >"$TEMPDIR/outro.txt"
         printf '%s\n' "$QUERY_STRING" |
           tr '&=' '\n\t' >"$TEMPDIR/input.txt"
-        awk \
-          -F '\t' \
-          -v H=2 \
-          -v L=0 \
-          -v M=21 \
-          -v W=63 \
-          -v P="$(cat "$TEMPDIR/prefix.txt")" \
-          -v I="$(cat "$TEMPDIR/infix.txt")" \
-          -v S="$(cat "$TEMPDIR/suffix.txt")" \
-          -f ../nec4lgtv.awk \
-          "$TEMPDIR/input.txt" >>"$TEMPDIR/output.txt"
+        awk -F '\t' -v H=2 -v L=0 -v M=21 -v W=63          \
+                    -v P="$(cat    "$TEMPDIR/prefix.txt")" \
+                    -v I="$(cat    "$TEMPDIR/infix.txt")"  \
+                    -v S="$(cat    "$TEMPDIR/suffix.txt")" \
+            -f ../nec4lgtv.awk     "$TEMPDIR/input.txt"    \
+                                 >>"$TEMPDIR/output.txt"
         cat "$TEMPDIR/outro.txt" >>"$TEMPDIR/output.txt"
+
+        printf 'Content-Type: application/octet-stream\r\n' \
+               'Cache-Control: no-cache\r\n'                \
+               'Content-Disposition: attachment; filename="lg-tv-ir.amsr"\r\n'
         printf 'Content-Length: '
         wc -c <"$TEMPDIR/output.txt" | tr -d '\n'
-        printf '\r\n'
+        printf '\r\n\r\n'
         cat "$TEMPDIR/output.txt"
 
 CGI_EOF
