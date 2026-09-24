@@ -1,9 +1,14 @@
 # READTHIS.md
 
-For maintainers, human or agent. `README.md` is for people trying to
-understand this repo; this file is for anyone about to change it.
-Binding instructions for Claude sessions are in `CLAUDE.md` — what
+For anyone about to modify anything here, for any reason — human or
+agent, passing through or settled in. `README.md` is for people trying
+to understand this repo; this file is for people about to change it.
+Binding instructions for Claude sessions are in `CLAUDE.md`; what
 follows is convention, and why.
+
+It is `READTHIS.md` rather than the tooling-recognised `AGENTS.md`
+because its audience is wider than agents. That was a deliberate choice,
+not an oversight — no need to re-litigate it.
 
 ## Root files are addressed mail
 
@@ -21,6 +26,14 @@ A thread that can't work out its own session ID can't find its mail, so
 inferred.
 
 Known IDs: `5m0rwj` (active), `lvurds` (dormant).
+
+## `etcetc/` is a junk drawer
+
+Always a miscellany: things live there because they don't belong
+anywhere else, not because they belong together. Placement there implies
+nothing about importance, maturity or relatedness, and no structure
+should be inferred from it. When something in `etcetc/` earns a real
+home, it gets one.
 
 ## Extensions track who answers for the rendering
 

@@ -2,16 +2,15 @@
 
 An experimental workspace shared between the repo owner and Claude Code
 sessions. It isn't in service of a pre-existing product — what's here is
-whatever the collaboration has produced so far.
+whatever the collaboration has produced or accumulated so far.
 
-Current contents:
+Layout:
 
-- `etcetc/reLGTVs/` — NEC-protocol infrared remote work for an Aldi
-  Tevion 55484 handset: a CGI shell script that emits an awk encoder, a
-  captured AnyMote code set, and working notes.
-
-Root files matching `_<six-char-id>_.*` are correspondence with
-individual Claude Code sessions rather than project content.
+- `etcetc/` — a miscellany: things that live here because they don't
+  belong anywhere else. Currently holds `reLGTVs/`, NEC-protocol
+  infrared remote work for an Aldi Tevion 55484 handset.
+- `_<six-char-id>_.*` — correspondence with individual Claude Code
+  sessions, not project content.
 
 **About to change something here?** Read `READTHIS.md` first. It covers
 the conventions this repo runs on, several of which are not guessable.

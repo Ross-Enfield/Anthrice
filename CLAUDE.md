@@ -38,5 +38,6 @@ rather than resolving it silently.
 
 ## Status
 
-No build, run, lint or test tooling exists yet. Working content so far
-lives under `etcetc/` and is the repo owner's, not Claude's.
+No build, run, lint or test tooling exists yet. What exists under
+`etcetc/` is the repo owner's, not Claude's — and `etcetc/` is a
+miscellany, so don't read purpose into anything found there.
