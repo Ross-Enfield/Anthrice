@@ -43,6 +43,7 @@ catch other threads too.
 - Precedence between rule files is now declared in `CLAUDE.md`. If it
   ever proves wrong in practice, that's worth reporting rather than
   quietly working around.
-- `claude/code-review-5m0rwj` still sits on origin. The owner agreed it
-  is litter, but every delete-push died in the proxy and diagnostics
-  weren't available to me. Left with the owner; don't assume it is live.
+- `claude/code-review-5m0rwj` still sits on origin and will stay there.
+  Every delete-push died in the proxy, and the owner has since ruled it
+  not worth pursuing. Closed rather than forgotten: it is litter, not
+  live work, and needs no re-raising.

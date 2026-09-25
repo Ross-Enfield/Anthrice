@@ -31,6 +31,11 @@ A root file named `_<id>_.txt` is then addressed **to** the thread
 holding that ID — it is what gives "you" and "I" a referent. Find yours
 and read it.
 
+Finding none is not an error. It means nothing thread-specific has been
+assigned to you yet: work from these shared files and from what the repo
+owner asks you directly, and ask rather than inventing a remit of your
+own.
+
 Keep your own running notes in `_<id>_.md`, which you own. Anything
 meant to outlive your thread belongs in `CLAUDE.md` or `READTHIS.md`
 instead: sessions end, these files don't.
