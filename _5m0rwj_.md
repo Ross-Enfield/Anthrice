@@ -11,9 +11,9 @@ Counterpart file: `_5m0rwj_.txt`, written by the repo owner and addressed
 
 - Wrote the first `CLAUDE.md`, encoding the owner's standing orders on
   ownership, committing to `main`, and branch christening.
-- Left a branch, `claude/code-review-5m0rwj`, on origin, holding a
-  superseded draft of `CLAUDE.md`. Harmless; the owner declined to care
-  either way.
+- Stood up as the repo's conformance role: I write the shared *how*
+  that other threads read, and review compliance against it. Filed the
+  first pass under `BSTworms/in202609/_5m0rwj_/`.
 - Split the rule files into layers: `CLAUDE.md` binds Claude sessions,
   `READTHIS.md` explains conventions to maintainers of either kind, and
   `README.md` orients newcomers and points at `READTHIS.md`. Conventions
@@ -43,3 +43,6 @@ catch other threads too.
 - Precedence between rule files is now declared in `CLAUDE.md`. If it
   ever proves wrong in practice, that's worth reporting rather than
   quietly working around.
+- `claude/code-review-5m0rwj` still sits on origin. The owner agreed it
+  is litter, but every delete-push died in the proxy and diagnostics
+  weren't available to me. Left with the owner; don't assume it is live.

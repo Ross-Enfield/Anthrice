@@ -35,6 +35,40 @@ nothing about importance, maturity or relatedness, and no structure
 should be inferred from it. When something in `etcetc/` earns a real
 home, it gets one.
 
+## `<TMZ>worms/` — write-once thread output
+
+Each sessionthread writes its output into a folder of its own:
+
+    <TMZ>worms/in<CCYYMM>/_<id>_/<DDHHMMSS>.<ext>
+
+**WORM: write once, read many.** Nothing here is modified after it is
+written. To revise, write a new file; the old one stays put. The
+timestamp in the basename is what stops successive versions colliding,
+so it serves as the versioning mechanism — there is no other.
+
+Path and basename divide one instant between them, each component
+appearing exactly once: the top level fixes the timezone, `in<CCYYMM>`
+the year and month, the basename the day, hour, minute and second within
+them. The timezone is the *supervising human's*, so that filenames line
+up with when a person experienced the events. It is a psychological
+convenience, not a technical one.
+
+"Conception" is deliberately loose — prompt time, planning time or the
+moment of writing all serve. The timestamp identifies a file; it doesn't
+measure anything. Use whatever accurate-enough time is already to hand
+rather than fetching a fresh one for its own sake.
+
+The repo owner creates the `<TMZ>worms/` and `in<CCYYMM>/` levels, there
+being only one or two a month. A thread creates its own `_<id>_/` folder
+inside an existing month, if it wants or needs one; not every thread
+will.
+
+Extensions are free — these are outputs, not prose by default. Where the
+content *is* prose, the authorship convention above still holds.
+
+Contrast the root `_<id>_.*` files, which are correspondence and are
+freely rewritten by whoever owns them. Root mail mutates; worms don't.
+
 ## Extensions track who answers for the rendering
 
 The owner writes `.txt`; Claude writes `.md`. Plain text has no syntax
