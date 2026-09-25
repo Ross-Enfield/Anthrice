@@ -22,9 +22,14 @@ From the repo owner:
 
 ## Find your mail
 
-Claude Code assigns each thread a six-character session ID. A root file
-named `_<id>_.txt` is addressed **to** the thread holding that ID — it
-is what gives "you" and "I" a referent. Find yours and read it.
+Claude Code assigns each thread a six-character session ID: the last
+six characters of that thread's own session name — `lvurds`, for
+`cloud-environment-setup-lvurds`. Work yours out before anything else.
+Without it you cannot tell which files are addressed to you.
+
+A root file named `_<id>_.txt` is then addressed **to** the thread
+holding that ID — it is what gives "you" and "I" a referent. Find yours
+and read it.
 
 Keep your own running notes in `_<id>_.md`, which you own. Anything
 meant to outlive your thread belongs in `CLAUDE.md` or `READTHIS.md`
